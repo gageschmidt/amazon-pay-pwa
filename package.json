@@ -1,0 +1,13 @@
+{
+  "name": "amazon-pay-pwa",
+  "version": "1.0.0",
+  "description": "An Amazon Pay graphql based collection of functionality",
+  "main": "index.js",
+  "repository": "https://github.com/gageschmidt/amazon-payments-magento-2-plugin",
+  "author": "Gage Schmidt",
+  "license": "MIT",
+  "peerDependencies": {
+    "@apollo/client": "^3.5.10",
+    "react": "^17.0.2"
+  }
+}
