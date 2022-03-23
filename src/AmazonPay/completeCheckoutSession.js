@@ -12,10 +12,14 @@ const completeCheckoutSession = (cartId, amazonSessionId) => {
         variables: {cartId: cartId, amazonSessionId: amazonSessionId}
     });
 
+    if (error) {
+        console.log(error)
+    }
+
     // when this imported method is called a promise is pending.
-    // the promise result will contain the queries response
+    // the promise result will contain the query's response
     // i.e.
-    // const linkMutation = completeChekoutSession("1234", "!234");
+    // const linkMutation = completeCheckoutSession("1234", "!234");
     //     linkMutation.then(function (result) {
     //         result.data.completeCheckoutSession;
     //     })

@@ -12,6 +12,10 @@ const checkoutSessionConfig = (cartId = "") => {
         variables: {cartId: cartId}
     });
 
+    if (error) {
+        console.log(error)
+    }
+
     // the requests are asynchronous.
     // if we try to read the data before it is successfully retrieved, we get an error of course
     // this isn't common with cached queries, but if it's the first run or the fetchPolicy is to ignore the cache

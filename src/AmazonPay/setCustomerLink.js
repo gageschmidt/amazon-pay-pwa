@@ -13,7 +13,7 @@ const setCustomerLink = (buyerToken, password) => {
     });
 
     // when this imported method is called a promise is pending.
-    // the promise result will contain the queries response
+    // the promise result will contain the query's response
     // i.e.
     // const linkMutation = setCustomerLink("1234", "!234");
     //     linkMutation.then(function (result) {
