@@ -2,7 +2,7 @@ import {useQuery} from '@apollo/client';
 import GET_STORE_CONFIG_DATA from "./queries/checkoutSessionConfig.gql";
 
 const checkoutSessionConfig = (cartId = "") => {
-    const { loading, error, data } = useQuery(GET_STORE_CONFIG_DATA.getConfig, {
+    const { loading, error, data } = useQuery(GET_STORE_CONFIG_DATA.checkoutSessionConfig, {
         // fetchPolicy will ignore the cached results.
         // not sure if we want to rely on the cached config or not yet
         // when testing changes, you may need to utilize this, or remove caching altogether
@@ -23,7 +23,6 @@ const checkoutSessionConfig = (cartId = "") => {
     if (data) {
         const queryResponse = data.checkoutSessionConfig;
         if (queryResponse) {
-            console.log(queryResponse.config);
             return queryResponse.config;
         }
     }

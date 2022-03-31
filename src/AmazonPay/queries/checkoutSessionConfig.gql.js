@@ -9,5 +9,5 @@ export const GET_STORE_CONFIG_DATA = gql`
 `;
 
 export default {
-    getConfig: GET_STORE_CONFIG_DATA
+    checkoutSessionConfig: GET_STORE_CONFIG_DATA
 }

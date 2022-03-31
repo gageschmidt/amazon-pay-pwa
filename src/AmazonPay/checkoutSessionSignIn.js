@@ -19,7 +19,6 @@ const checkoutSessionSignIn = (buyerToken) => {
     if (data) {
         const queryResponse = data.checkoutSessionSignIn;
         if (queryResponse) {
-            console.log(queryResponse.response);
             return queryResponse.response;
         }
     }

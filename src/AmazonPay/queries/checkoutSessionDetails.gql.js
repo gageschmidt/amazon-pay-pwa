@@ -9,5 +9,5 @@ export const GET_CHECKOUT_SESSION_DETAILS = gql`
 `;
 
 export default {
-    getCheckoutSessionDetails: GET_CHECKOUT_SESSION_DETAILS
+    checkoutSessionDetails: GET_CHECKOUT_SESSION_DETAILS
 }

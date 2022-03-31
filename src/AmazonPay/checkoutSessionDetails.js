@@ -2,7 +2,7 @@ import {useQuery} from '@apollo/client';
 import GET_CHECKOUT_SESSION_DETAILS from './queries/checkoutSessionDetails.gql'
 
 const checkoutSessionDetails = (amazonSessionId, queryTypes) => {
-    const { loading, error, data } = useQuery(GET_CHECKOUT_SESSION_DETAILS.getCheckoutSessionDetails, {
+    const { loading, error, data } = useQuery(GET_CHECKOUT_SESSION_DETAILS.checkoutSessionDetails, {
         // fetchPolicy will ignore the cached results.
         // not sure if we want to rely on the cached config or not yet
         // when testing changes, you may need to utilize this, or remove caching altogether
@@ -23,7 +23,6 @@ const checkoutSessionDetails = (amazonSessionId, queryTypes) => {
     if (data) {
         const queryResponse = data.checkoutSessionDetails;
         if (queryResponse) {
-            console.log(queryResponse.response);
             return queryResponse.response;
         }
     }
